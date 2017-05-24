@@ -8,4 +8,4 @@ if [ -f "${PASSWORD_SECRET}" ]; then
     COMMAND_OPTIONS="${COMMAND_OPTIONS} -password $PSS"
 fi
 
-java -jar /home/jenkins/swarm-client-${SWARM_CLIENT_VERSION}.jar ${COMMAND_OPTIONS}
+java -Djava.net.useSystemProxies=true -jar /home/jenkins/swarm-client-${SWARM_CLIENT_VERSION}.jar ${COMMAND_OPTIONS}
